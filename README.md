@@ -5,5 +5,4 @@ Models:
  - Test
  - Question
  - Answer
- - Result
  - Category
