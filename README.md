@@ -6,3 +6,4 @@ Models:
  - Question
  - Answer
  - Category
+ - Result
