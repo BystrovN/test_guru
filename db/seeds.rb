@@ -18,35 +18,35 @@ users = User.create!(
 
 tests = Test.create!(
   [
-    { title: 'Тест 1', category_id: categories[0].id, author_id: users[0].id },
-    { title: 'Тест 2', level: 2, category_id: categories[1].id, author_id: users[0].id },
-    { title: 'Тест 3', category_id: categories[0].id, author_id: users[0].id },
-    { title: 'Тест 4', category_id: categories[0].id, author_id: users[0].id }
+    { title: 'Тест 1', category: categories[0], author: users[0] },
+    { title: 'Тест 2', level: 2, category: categories[1], author: users[0] },
+    { title: 'Тест 3', category: categories[0], author: users[0] },
+    { title: 'Тест 4', category: categories[0], author: users[0] }
   ]
 )
 
 questions = Question.create!(
   [
-    { body: 'Вопрос 1', test_id: tests[0].id },
-    { body: 'Вопрос 2', test_id: tests[1].id }
+    { body: 'Вопрос 1', test: tests[0] },
+    { body: 'Вопрос 2', test: tests[1] }
   ]
 )
 
 Answer.create!(
   [
-    { body: 'Ответ 1', question_id: questions[0].id, correct: true },
-    { body: 'Ответ 2', question_id: questions[0].id },
-    { body: 'Ответ 3', question_id: questions[1].id, correct: true },
-    { body: 'Ответ 4', question_id: questions[1].id }
+    { body: 'Ответ 1', question: questions[0], correct: true },
+    { body: 'Ответ 2', question: questions[0] },
+    { body: 'Ответ 3', question: questions[1], correct: true },
+    { body: 'Ответ 4', question: questions[1] }
   ]
 )
 
 Result.create!(
   [
-    { test_id: tests[0].id, user_id: users[1].id, passed: true },
-    { test_id: tests[1].id, user_id: users[2].id },
-    { test_id: tests[1].id, user_id: users[1].id },
-    { test_id: tests[2].id, user_id: users[1].id },
-    { test_id: tests[3].id, user_id: users[1].id, passed: true }
+    { test: tests[0], user: users[1], passed: true },
+    { test: tests[1], user: users[2] },
+    { test: tests[1], user: users[1] },
+    { test: tests[2], user: users[1] },
+    { test: tests[3], user: users[1], passed: true }
   ]
 )
