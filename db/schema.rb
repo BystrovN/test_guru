@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2024_01_31_161537) do
     t.string "username", limit: 20, null: false
     t.string "password_digest"
     t.boolean "admin", default: false
+    t.string "email", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["username"], name: "index_users_on_username", unique: true

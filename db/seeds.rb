@@ -10,9 +10,9 @@ categories = Category.create!([{ title: 'Категория 1' }, { title: 'Ка
 
 users = User.create!(
   [
-    { username: 'admin', password_digest: 'пароль', admin: true },
-    { username: 'Пользователь 1', password_digest: 'пароль' },
-    { username: 'Пользователь 2', password_digest: 'пароль' }
+    { username: 'admin', password_digest: 'пароль', admin: true, email: 'admin@test.com' },
+    { username: 'Пользователь 1', password_digest: 'пароль', email: 'user1@test.com' },
+    { username: 'Пользователь 2', password_digest: 'пароль', email: 'user2@test.com' }
   ]
 )
 
