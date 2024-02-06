@@ -4,11 +4,11 @@ class Answer < ApplicationRecord
   validates :body, presence: true
   validate :validate_number_of_answers, on: :create
 
-  scope :correct_answers, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   private
 
   def validate_number_of_answers
-    errors.add(:base, 'Допустимое число ответов - от 1 до 4') unless question.answers.length.between?(0, 4)
+    errors.add(:base, 'Максимально допустимое число ответов - 4') if question.answers.count >= 4
   end
 end
