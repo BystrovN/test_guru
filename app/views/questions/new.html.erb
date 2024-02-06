@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Создание нового вопроса</title>
+  </head>
+
+  <body>
+
+    <h1>Создание нового вопроса</h1>
+
+    <form action="<%= test_questions_path(@test) %>" method="post">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input name="question[test_id]" value="<%= @test.id %>" type="hidden">
+
+      <p>
+        <label for="question_body">Body:</label><br>
+        <textarea id="question_body" name="question[body]" rows="4" cols="50"></textarea>
+      </p><br>
+
+      <input type="submit" value="Создать">
+    </form>
+
+  </body>
+</html>
