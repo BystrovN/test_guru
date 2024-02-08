@@ -1,0 +1,6 @@
+<h1>Список вопросов теста <%= @test.title %></h1>
+<h2>Количество вопросов - <%= @test.questions.count %></h2>
+<%= render @questions %>
+
+<%= link_to 'Добавить вопрос', new_test_question_path(@test) %> |
+<%= link_to 'Назад к тесту', test_path(@test) %>
