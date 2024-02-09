@@ -1,8 +1,11 @@
 <p>Загаловок: <%= @test.title %></p>
 <p>Уровень: <%= @test.level %></p>
-<p>Категрия:<%= @test.category.title %></p>
-<p>Автор:<%= @test.author.username %></p>
+<p>Категория: <%= @test.category.title %></p>
+<p>Автор: <%= @test.author.username %></p>
+<%= link_to 'Редактировать', edit_test_path(@test) %>
 
-<%= link_to 'Редактировать', edit_test_path(@test) %> |
-<%= link_to 'Назад', tests_path %> |
-<%= link_to 'Вопросы теста', test_questions_path(@test) %>
+<h2>Список вопросов:</h2>
+<%= render @test.questions %>
+<%= link_to 'Добавить вопрос', new_test_question_path(@test) %>
+
+<%= link_to 'Назад', tests_path %>

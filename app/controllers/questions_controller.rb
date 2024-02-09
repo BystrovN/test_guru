@@ -1,14 +1,8 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: [:index, :create, :new]
+  before_action :find_test, only: [:create, :new]
   before_action :find_question, only: [:show, :destroy, :edit, :update]
 
-  before_action :find_test, only: [:index, :create, :new]
-
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-  def index
-    @questions = @test.questions
-  end
 
   def show; end
 
@@ -27,7 +21,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_questions_path(@question.test)
+    redirect_to test_path(@question.test)
   end
 
   def edit; end
