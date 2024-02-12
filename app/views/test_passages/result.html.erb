@@ -1,0 +1,11 @@
+<h1>The <%= @test_passage.test.title %> Test was Completed!</h1>
+
+<p>
+  <% if @test_passage.success_percentage >= TestPassage::SUCCESS_PERCENTAGE %>
+    <span style="color: green;"><%= @test_passage.success_percentage %>% <%= @test_passage.success_message %></span>
+  <% else %>
+    <span style="color: red;"><%= @test_passage.success_percentage %>% <%= @test_passage.success_message %></span>
+  <% end %>
+</p>
+
+<%= link_to "Список всех тестов", tests_path %>

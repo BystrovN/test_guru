@@ -28,7 +28,8 @@ tests = Test.create!(
 questions = Question.create!(
   [
     { body: 'Вопрос 1', test: tests[0] },
-    { body: 'Вопрос 2', test: tests[1] }
+    { body: 'Вопрос 2', test: tests[1] },
+    { body: 'Вопрос 3', test: tests[1] }
   ]
 )
 
@@ -37,16 +38,8 @@ Answer.create!(
     { body: 'Ответ 1', question: questions[0], correct: true },
     { body: 'Ответ 2', question: questions[0] },
     { body: 'Ответ 3', question: questions[1], correct: true },
-    { body: 'Ответ 4', question: questions[1] }
-  ]
-)
-
-Result.create!(
-  [
-    { test: tests[0], user: users[1], passed: true },
-    { test: tests[1], user: users[2] },
-    { test: tests[1], user: users[1] },
-    { test: tests[2], user: users[1] },
-    { test: tests[3], user: users[1], passed: true }
+    { body: 'Ответ 4', question: questions[1] },
+    { body: 'Ответ 5', question: questions[1], correct: true },
+    { body: 'Ответ 6', question: questions[2], correct: true }
   ]
 )
