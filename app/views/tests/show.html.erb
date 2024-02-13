@@ -1,7 +1,7 @@
 <p>Загаловок: <%= @test.title %></p>
 <p>Уровень: <%= @test.level %></p>
 <p>Категория: <%= @test.category.title %></p>
-<p>Автор: <%= @test.author.username %></p>
+<p>Автор: <%= @test.author.email %></p>
 <%= link_to 'Редактировать', edit_test_path(@test) %>
 
 <h2>Список вопросов:</h2>
