@@ -6,4 +6,4 @@ Models:
  - Question
  - Answer
  - Category
- - Result
+ - TestPassage
