@@ -2,9 +2,9 @@
 
 <p>
   <% if @test_passage.success_percentage >= TestPassage::SUCCESS_PERCENTAGE %>
-    <span style="color: green;"><%= @test_passage.success_percentage %>% <%= @test_passage.success_message %></span>
+    <span style="color: green;"><%= @test_passage.success_percentage %>% Тест сдан</span>
   <% else %>
-    <span style="color: red;"><%= @test_passage.success_percentage %>% <%= @test_passage.success_message %></span>
+    <span style="color: red;"><%= @test_passage.success_percentage %>% Тест не сдан</span>
   <% end %>
 </p>
 

@@ -5,7 +5,7 @@ class TestPassage < ApplicationRecord
   belongs_to :user
   belongs_to :current_question, class_name: 'Question', optional: true, foreign_key: 'question_id'
 
-  before_validation :before_validation_set_next_question
+  before_validation :before_validation_find_next_question
 
   def completed?
     current_question.nil?
@@ -20,10 +20,6 @@ class TestPassage < ApplicationRecord
     (correct_questions.to_f / test.questions.count * 100).round(2)
   end
 
-  def success_message
-    success_percentage >= SUCCESS_PERCENTAGE ? 'Тест сдан' : 'Test не сдан'
-  end
-
   def current_question_number
     test.questions.order(:id).where('id <= ?', current_question.id).count
   end
@@ -34,19 +30,19 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def set_first_question
+  def find_first_question
     self.current_question = test.questions.first if test.present?
   end
 
-  def set_next_question
+  def find_next_question
     self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 
-  def before_validation_set_next_question
+  def before_validation_find_next_question
     if new_record?
-      set_first_question
+      find_first_question
     else
-      set_next_question
+      find_next_question
     end
   end
 
