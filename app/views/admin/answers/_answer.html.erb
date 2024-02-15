@@ -1,0 +1,7 @@
+<h2>Answers</h2>
+
+<%= link_to 'Новый ответ', new_admin_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol>

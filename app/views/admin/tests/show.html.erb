@@ -4,7 +4,7 @@
 <p>Автор: <%= @test.author.email %></p>
 
 <h2>Список вопросов:</h2>
-<%= render partial: 'questions/question', collection: @test.questions %>
-<%= link_to 'Добавить вопрос', new_test_question_path(@test) %>
+<%= render partial: 'admin/questions/question', collection: @test.questions %>
+<%= link_to 'Добавить вопрос', new_admin_test_question_path(@test) %>
 
 <%= link_to 'Назад', admin_tests_path %>
