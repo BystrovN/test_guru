@@ -2,9 +2,5 @@
   <h3><%= test.title %></h3>
   <p>Уровень: <%= test.level %></p>
   <p>Количество вопросов: <%= test.questions.count %></p>
-  <%= link_to 'Просмотр', test_path(test) %> |
-  <%= link_to 'Редактировать', edit_test_path(test) %> |
-  <%= link_to 'Удалить', test_path(test), method: :delete, data: { confirm: 'Вы уверены?' } %>
-
   <td><%= button_to 'Start', start_test_path(test) %></td>
 </div>
