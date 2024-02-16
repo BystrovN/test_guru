@@ -1,5 +1,4 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: [:start]
   skip_before_action :authenticate_user!, only: [:index]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -9,6 +8,7 @@ class TestsController < ApplicationController
   end
 
   def start
+    find_test
     current_user.tests.push(@test)
     redirect_to current_user.test_passage(@test)
   end
