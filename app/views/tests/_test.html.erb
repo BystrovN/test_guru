@@ -1,6 +1,6 @@
 <div>
-  <h3><%= test.title %></h3>
-  <p>Уровень: <%= test.level %></p>
-  <p>Количество вопросов: <%= test.questions.count %></p>
-  <td><%= button_to 'Start', start_test_path(test) %></td>
+  <h3><%= t('.header', title: test.title) %></h3>
+  <p><%= t('.level', level: test.level) %></p>
+  <p><%= t('.questions_count', count: test.questions.count) %></p>
+  <td><%= button_to t('buttons.start'), start_test_path(test) %></td>
 </div>

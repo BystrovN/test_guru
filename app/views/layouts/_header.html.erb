@@ -5,10 +5,10 @@
     <ul>
       <% if user_signed_in? %>
         <p>Welcome, <b><%= current_user.email %></b> Guru</p>
-        <li class="nav user"><%= link_to "Выход", destroy_user_session_path, method: :delete %></li>
+        <li class="nav user"><%= link_to t('header.logout'), destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li class="nav user"><%= link_to "Логин", new_user_session_path %></li>
-        <li class="nav user"><%= link_to "Регистрация", new_user_registration_path %></li>
+        <li class="nav user"><%= link_to t('header.login'), new_user_session_path %></li>
+        <li class="nav user"><%= link_to t('header.registration'), new_user_registration_path %></li>
       <% end %>
     </ul>
   </nav>

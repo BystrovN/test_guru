@@ -11,7 +11,7 @@ class Users::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     super
-    flash[:notice] = "Привет, #{@user.first_name} #{@user.last_name}!"
+    flash[:notice] = "#{t('hello')}, #{@user.first_name} #{@user.last_name}!"
   end
 
   # DELETE /resource/sign_out

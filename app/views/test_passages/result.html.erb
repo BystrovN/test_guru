@@ -2,10 +2,10 @@
 
 <p>
   <% if @test_passage.success_percentage >= TestPassage::SUCCESS_PERCENTAGE %>
-    <span style="color: green;"><%= @test_passage.success_percentage %>% Тест сдан</span>
+    <span style="color: green;"><%= @test_passage.success_percentage %> <%= t('.pass') %></span>
   <% else %>
-    <span style="color: red;"><%= @test_passage.success_percentage %>% Тест не сдан</span>
+    <span style="color: red;"><%= @test_passage.success_percentage %> <%= t('.failed') %></span>
   <% end %>
 </p>
 
-<%= link_to "Список всех тестов", tests_path %>
+<%= link_to t('.all_tests'), tests_path %>

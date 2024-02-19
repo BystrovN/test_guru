@@ -1,7 +1,7 @@
-<h2>Answers</h2>
-
-<%= link_to 'Новый ответ', new_admin_question_answer_path(@question) %>
-
-<ol>
-  <%= render @question.answers %>
-</ol>
+<div>
+  <h3><%= answer.body %></h3>
+  <p><%= t('.correct', correct: answer.correct) %></p>
+  <%= link_to t('links.show'), admin_answer_path(answer) %> |
+  <%= link_to t('links.edit'), edit_admin_answer_path(answer) %> |
+  <%= link_to t('links.delete'), admin_answer_path(answer), method: :delete, data: { confirm: t('actions.sure?') } %>
+</div>

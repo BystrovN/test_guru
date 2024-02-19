@@ -1,0 +1,41 @@
+en:
+  admin:
+    tests:
+      index:
+        header: "Available tests"
+      show: &show
+        header: "Title: %{title}"
+        level: "Level: %{level}"
+        category: "Category: %{title}"
+        author: "Author: %{email}"
+        questions_list: "List of questions:"
+      test:
+        <<: *show
+        questions_count: "Number of questions: %{count}"
+      new:
+        new: "New test"
+      notice:
+        created: "Test successfully created."
+        updated: "Test successfully updated."
+    
+    answers:
+      answer:
+        correct: "Correct answer: %{correct}"
+      edit:
+        edit: "Edit answer"
+      new:
+        new: "New answer"
+      notice:
+        created: "Answer successfully created."
+        updated: "Answer successfully updated."
+
+    questions:
+      edit:
+        edit: "Edit question"
+      new:
+        new: "New question"
+      show:
+        new: "Add answer"
+      notice:
+        created: "Question successfully created."
+        updated: "Question successfully updated."

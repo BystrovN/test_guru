@@ -13,7 +13,7 @@ class Admin::AnswersController < Admin::BaseController
   def create
     @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to admin_question_path(@question), notice: 'Answer was successfully updated.'
+      redirect_to admin_question_path(@question), notice: t('.notice.created')
     else
       render :new
     end
@@ -21,7 +21,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      redirect_to admin_question_path(@question)
+      redirect_to admin_question_path(@answer.question), notice: t('.notice.updated')
     else
       render :edit
     end

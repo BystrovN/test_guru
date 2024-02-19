@@ -1,0 +1,41 @@
+ru:
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+      show: &show
+        header: "Название: %{title}"
+        level: "Уровень: %{level}"
+        category: "Категория: %{title}"
+        author: "Автор: %{email}"
+        questions_list: "Список вопросов:"
+      test:
+        <<: *show
+        questions_count: "Количество вопросов: %{count}"
+      new:
+        new: "Новый тест"
+      notice:
+        created: "Тест успешно создан."
+        updated: "Тест успешно обновлен."
+    
+    answers:
+      answer:
+        correct: "Ответ верный: %{correct}"
+      edit:
+        edit: "Редактировать ответ"
+      new:
+        new: "Новый ответ"
+      notice:
+        created: "Ответ успешно создан."
+        updated: "Ответ успешно обновлен."
+
+    questions:
+      edit:
+        edit: "Редактировать вопрос"
+      new:
+        new: "Новый вопрос"
+      show:
+        new: "Добавить ответ"
+      notice:
+        created: "Вопрос успешно создан."
+        updated: "Вопрос успешно обновлен."

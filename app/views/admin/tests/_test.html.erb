@@ -1,8 +1,8 @@
 <div>
-  <h3><%= test.title %></h3>
-  <p>Уровень: <%= test.level %></p>
-  <p>Количество вопросов: <%= test.questions.count %></p>
-  <%= link_to 'Просмотр', admin_test_path(test) %> |
-  <%= link_to 'Редактировать', edit_admin_test_path(test) %> |
-  <%= link_to 'Удалить', admin_test_path(test), method: :delete, data: { confirm: 'Вы уверены?' } %>
+  <h3><%= t('.header', title: test.title) %></h3>
+  <p><%= t('.level', level: test.level) %></p>
+  <p><%= t('.questions_count', count: test.questions.count) %></p>
+  <%= link_to t('links.show'), admin_test_path(test) %> |
+  <%= link_to t('links.edit'), edit_admin_test_path(test) %> |
+  <%= link_to t('links.delete'), admin_test_path(test), method: :delete, data: { confirm: t('actions.sure?') } %>
 </div>

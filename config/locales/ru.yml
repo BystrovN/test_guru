@@ -1,20 +1,23 @@
 ru:
-  hello: "Привет мир!"
+  hello: "Привет"
 
   tests:
     index:
       header: "Доступные тесты"
+    test:
+      header: "Название: %{title}"
+      level: "Уровень: %{level}"
+      questions_count: "Количество вопросов: %{count}"
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
-
-  admin:
-    tests:
-      index:
-        header: "Доступные тесты"
-      create:
-        success: "Тест был успешно создан."
+      pass: "Тест сдан"
+      failed: "Тест провален"
+      all_tests: "Список всех тестов"
+    show:
+      walk: "Прохождение %{title}"
+      current_question: "Вопрос %{current_question} из %{total_questions}:"
 
   helpers:
     submit:
@@ -26,6 +29,8 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    select:
+      prompt: "Выберите категорию: "
 
   shared:
     errors:
@@ -38,3 +43,21 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  links:
+    add: "Добавить"
+    back: "Назад"
+    show: "Просмотр"
+    edit: "Редактировать"
+    delete: "Удалить"
+
+  actions:
+    sure?: "Вы уверены?"
+
+  buttons:
+    start: "Начать"
+
+  header:
+    logout: "Выход"
+    login: "Логин"
+    registration: "Регистрация"

@@ -1,21 +1,24 @@
 en:
-  hello: "Hello world!"
+  hello: "Hello"
 
   tests:
     index:
-      header: "Tricky Tests"
+      header: "Available tests"
+    test:
+      header: "Title: %{title}"
+      level: "Level: %{level}"
+      questions_count: "Number of questions: %{count}"
 
   test_passages:
     result:
-      header: "Tes %{title} was succesfully completed!"
+      header: "Test %{title} successfully completed!"
+      pass: "Test passed"
+      failed: "Test failed"
+      all_tests: "List of all tests"
+    show:
+      walk: "Passage of %{title}"
+      current_question: "Question %{current_question} out of %{total_questions}:"
 
-  admin:
-    tests:
-      index:
-        header: "Tricky Tests"
-      create:
-        success: "Test was succesfully created."
-  
   helpers:
     submit:
       test:
@@ -26,13 +29,35 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
-  
+    select:
+      prompt: "Select category: "
+
   shared:
     errors:
       header:
-        one: "%{count} error detected"
-        other: "%{count} errors detected"
+        few: "Detected %{count} errors"
+        many: "Detected %{count} errors"
+        one: "Detected %{count} error"
+        other: "Detected %{count} errors"
 
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"
+      subject: "You have successfully completed a test on TestGuru!"
+
+  links:
+    add: "Add"
+    back: "Back"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+
+  actions:
+    sure?: "Are you sure?"
+
+  buttons:
+    start: "Start"
+
+  header:
+    logout: "Logout"
+    login: "Login"
+    registration: "Registration"
