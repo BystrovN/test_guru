@@ -63,3 +63,10 @@ en:
     logout: "Logout"
     login: "Login"
     registration: "Registration"
+    admin: "Admin panel"
+
+  info:
+    school: "Educational project at Thinknetica online school"
+    author: "Nikita"
+    about: "Platform for creating and taking various tests."
+

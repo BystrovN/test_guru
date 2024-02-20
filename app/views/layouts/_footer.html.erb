@@ -1,9 +1,10 @@
-<footer>
-  <p><%= current_year %></p>
-  <p>Никита</p>
-  <p>
-    <%= github_url('BystrovN', 'test_guru') %><br>
-    <%= "Платформа для создания и прохождения разнообразных тестов." %>
-  </p>
-  <p><%= link_to "Учебный проект в онлайн-школе Thinknetica", "https://thinknetica.com" %></p>
+<footer class="container-fluid bg-light text-dark py-3 d-flex justify-content-center">
+  <div class="container text-center">
+    <p>
+      <%= current_year %> 
+      <%= t('info.author') %> 
+    </p>
+    <p><%= github_url('BystrovN', 'test_guru') %><br><%= t('info.about') %></p>
+    <p><%= link_to t('info.school'), "https://thinknetica.com" %></p>
+  </div>
 </footer>

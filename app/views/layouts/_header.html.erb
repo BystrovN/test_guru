@@ -1,15 +1,38 @@
-<header>
-  <p><%= link_to "TestGuru", root_path %></p>
-  
-  <nav class="nav navbar-light bg-light">
-    <span class="navbar-text">
-      <% if user_signed_in? %>
-        <p>Welcome, <b><%= current_user.email %></b> Guru</p>
-        <li class="nav user"><%= link_to t('header.logout'), destroy_user_session_path, method: :delete %></li>
-      <% else %>
-        <li class="nav user"><%= link_to t('header.login'), new_user_session_path %></li>
-        <li class="nav user"><%= link_to t('header.registration'), new_user_registration_path %></li>
-      <% end %>
-    </span>
-  </nav>
+<header class="container-fluid bg-dark text-light py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-3">
+        <p class="mb-0">
+          <%= link_to "TestGuru", root_path, class: "text-light h2", style: "text-decoration: none;" %>
+        </p>
+      </div>
+      <div class="col-md-9">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <% if user_signed_in? %>
+            <p class="navbar-text me-3 mb-0">Welcome, <b><%= current_user.email %></b> Guru</p>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <%= link_to t('header.logout'), destroy_user_session_path, method: :delete, class: "nav-link" %>
+              </li>
+              <% if current_user.admin? %>
+                  <li class="nav-item">
+                    <%= link_to t('header.admin'), admin_tests_path, class: "nav-link" %>
+                  </li>
+                </ul>
+              <% end %>
+            </ul>
+          <% else %>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <%= link_to t('header.login'), new_user_session_path, class: "nav-link" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to t('header.registration'), new_user_registration_path, class: "nav-link" %>
+              </li>
+            </ul>
+          <% end %>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
