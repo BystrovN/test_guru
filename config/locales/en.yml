@@ -24,6 +24,8 @@ en:
       test:
         create: "Create Test"
         update: "Update Test"
+      user:
+        create: "Login"
     label:
       test:
         title: "Title"

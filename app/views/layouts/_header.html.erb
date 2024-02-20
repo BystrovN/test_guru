@@ -1,8 +1,8 @@
 <header>
   <p><%= link_to "TestGuru", root_path %></p>
   
-  <nav>
-    <ul>
+  <nav class="nav navbar-light bg-light">
+    <span class="navbar-text">
       <% if user_signed_in? %>
         <p>Welcome, <b><%= current_user.email %></b> Guru</p>
         <li class="nav user"><%= link_to t('header.logout'), destroy_user_session_path, method: :delete %></li>
@@ -10,6 +10,6 @@
         <li class="nav user"><%= link_to t('header.login'), new_user_session_path %></li>
         <li class="nav user"><%= link_to t('header.registration'), new_user_registration_path %></li>
       <% end %>
-    </ul>
+    </span>
   </nav>
 </header>

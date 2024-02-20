@@ -24,6 +24,8 @@ ru:
       test:
         create: "Создать Тест"
         update: "Обновить Тест"
+      user:
+        create: "Войти"
     label:
       test:
         title: "Название"
@@ -56,6 +58,7 @@ ru:
 
   buttons:
     start: "Начать"
+
 
   header:
     logout: "Выход"
