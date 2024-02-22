@@ -8,20 +8,25 @@
 
 categories = Category.create!([{ title: 'Категория 1' }, { title: 'Категория 2' }])
 
-users = User.create!(
+User.create!(
   [
-    { password_digest: 'пароль', admin: true, email: 'admin@test.com' },
-    { password_digest: 'пароль', email: 'user1@test.com' },
-    { password_digest: 'пароль', email: 'user2@test.com' }
+    { email: 'user1@test.com', first_name: '1', last_name: '2', password: 123_123 },
+    { email: 'user2@test.com', first_name: '2', last_name: '3', password: 123_123 }
+  ]
+)
+
+admins = Admin.create!(
+  [
+    { admin: true, email: 'admin@test.com', first_name: 'admin', last_name: 'admin', password: 123_123 }
   ]
 )
 
 tests = Test.create!(
   [
-    { title: 'Тест 1', category: categories[0], author: users[0] },
-    { title: 'Тест 2', level: 2, category: categories[1], author: users[0] },
-    { title: 'Тест 3', category: categories[0], author: users[0] },
-    { title: 'Тест 4', category: categories[0], author: users[0] }
+    { title: 'Тест 1', category: categories[0], author: admins[0] },
+    { title: 'Тест 2', level: 2, category: categories[1], author: admins[0] },
+    { title: 'Тест 3', category: categories[0], author: admins[0] },
+    { title: 'Тест 4', category: categories[0], author: admins[0] }
   ]
 )
 

@@ -39,3 +39,9 @@ en:
       notice:
         created: "Question successfully created."
         updated: "Question successfully updated."
+    
+    gists:
+      index:
+        header: "Created gists"
+        question: "Question"
+        user: "User"

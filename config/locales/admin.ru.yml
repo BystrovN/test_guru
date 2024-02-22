@@ -39,3 +39,9 @@ ru:
       notice:
         created: "Вопрос успешно создан."
         updated: "Вопрос успешно обновлен."
+
+    gists:
+      index:
+        header: "Созданные gists"
+        question: "Вопрос"
+        user: "Пользователь"

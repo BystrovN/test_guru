@@ -18,6 +18,10 @@ en:
     show:
       walk: "Passage of %{title}"
       current_question: "Question %{current_question} out of %{total_questions}:"
+      gist_link_text: "Gist question"
+    gist:
+      success: "Gist was succesfully created - %{url}"
+      failure: "An error occured while saving gist"
 
   helpers:
     submit:
@@ -69,4 +73,7 @@ en:
     school: "Educational project at Thinknetica online school"
     author: "Nikita"
     about: "Platform for creating and taking various tests."
+  
+  gist:
+    description: "A question about %{title} from TestGuru"
 

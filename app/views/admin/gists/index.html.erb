@@ -1,0 +1,18 @@
+<h1 class="mt-5 mb-4"><%= t('.header') %></h1>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%=t ('.question') %></th>
+        <th>Gist URL</th>
+        <th><%=t ('.user') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @gists %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to t('links.back'), admin_tests_path, class: 'btn btn-secondary' %>

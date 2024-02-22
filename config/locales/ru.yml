@@ -18,6 +18,10 @@ ru:
     show:
       walk: "Прохождение %{title}"
       current_question: "Вопрос %{current_question} из %{total_questions}:"
+      gist_link_text: "Gist вопрос"
+    gist:
+      success: "Gist успешно сохранен - %{url}"
+      failure: "Во время сохранения gist произошла ошибка"
 
   helpers:
     submit:
@@ -70,3 +74,6 @@ ru:
     school: "Учебный проект в онлайн-школе Thinknetica"
     author: "Никита"
     about: "Платформа для создания и прохождения разнообразных тестов."
+
+  gist:
+    description: "Вопрос о %{title} от TestGuru"
