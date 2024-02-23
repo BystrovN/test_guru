@@ -50,6 +50,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  gem 'dotenv-rails', '~> 3.0'
   gem 'letter_opener'
 end
 
@@ -64,5 +65,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
-gem 'dotenv-rails', '~> 3.0'
 gem 'octokit', '~> 5.0'

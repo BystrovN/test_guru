@@ -19,9 +19,11 @@ en:
       walk: "Passage of %{title}"
       current_question: "Question %{current_question} out of %{total_questions}:"
       gist_link_text: "Gist question"
-    gist:
-      success: "Gist was succesfully created - %{url}"
-      failure: "An error occured while saving gist"
+
+  gists:
+    create:
+      success: "Gist was successfully created - %{url}"
+      failure: "An error occurred while saving gist"
 
   helpers:
     submit:

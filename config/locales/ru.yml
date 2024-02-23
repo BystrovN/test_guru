@@ -19,7 +19,9 @@ ru:
       walk: "Прохождение %{title}"
       current_question: "Вопрос %{current_question} из %{total_questions}:"
       gist_link_text: "Gist вопрос"
-    gist:
+  
+  gists:
+    create:
       success: "Gist успешно сохранен - %{url}"
       failure: "Во время сохранения gist произошла ошибка"
 

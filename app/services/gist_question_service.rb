@@ -1,4 +1,6 @@
 class GistQuestionService
+  GistResult = Struct.new(:success?, :url)
+
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -6,7 +8,8 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)
+    response = @client.create_gist(gist_params)
+    GistResult.new(success?: response[:html_url].present?, url: response[:html_url])
   end
 
   private
@@ -23,8 +26,6 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.body]
-    content += @question.answers.pluck(:body)
-    content.join("\n")
+    [@question.body, *@question.answers.pluck(:body)].join("\n")
   end
 end

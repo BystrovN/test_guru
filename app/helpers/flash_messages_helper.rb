@@ -3,7 +3,7 @@ module FlashMessagesHelper
     return if flash[type].nil?
 
     bootstrap_class = bootstrap_class_for_flash_type(type)
-    content_tag :div, flash[type], class: bootstrap_class
+    content_tag :div, flash[type].html_safe, class: bootstrap_class
   end
 
   private
