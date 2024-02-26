@@ -12,8 +12,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("bootstrap");
-import "../stylesheets/application";
+import "../utilities/sorting";
 document.addEventListener("turbolinks:load", function () {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();

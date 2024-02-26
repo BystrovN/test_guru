@@ -3,15 +3,16 @@ ru:
     tests:
       index:
         header: "Доступные тесты"
+        test_header: "Название"
+        level: "Уровень"
+        questions_count: "Количество вопросов"
+        actions: "Управление"
       show: &show
         header: "Название: %{title}"
         level: "Уровень: %{level}"
         category: "Категория: %{title}"
         author: "Автор: %{email}"
         questions_list: "Список вопросов:"
-      test:
-        <<: *show
-        questions_count: "Количество вопросов: %{count}"
       new:
         new: "Новый тест"
       notice:

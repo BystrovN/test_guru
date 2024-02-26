@@ -3,15 +3,16 @@ en:
     tests:
       index:
         header: "Available tests"
+        test_header: "Title"
+        level: "Level"
+        questions_count: "Number of questions"
+        actions: "Actions"
       show: &show
         header: "Title: %{title}"
         level: "Level: %{level}"
         category: "Category: %{title}"
         author: "Author: %{email}"
         questions_list: "List of questions:"
-      test:
-        <<: *show
-        questions_count: "Number of questions: %{count}"
       new:
         new: "New test"
       notice:
