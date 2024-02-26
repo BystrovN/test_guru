@@ -2,5 +2,19 @@
   <div class="text-center">
     <h1><%= t('.header') %></h1>
   </div>
-  <%= render @tests %>
+  <table class="table">
+    <tr>
+      <th class="sort-by-title pointer" style="text-align: center;" data-turbolinks="false">
+        <%= t('.test_header') %>
+        <%= octicon 'arrow-up', class: 'text-succes hide' %>
+        <%= octicon 'arrow-down', class: 'text-succes hide' %>
+      </th>
+      <th style="text-align: center;"><%= t('.level') %></th>
+      <th style="text-align: center;"><%= t('.questions_count') %></th>
+      <th colspan="1" style="text-align: center;"><%= t('.actions') %></th>
+    </tr>
+    <tbody>
+      <%= render @tests %>
+    </tbody>
+  </table>
 </div>

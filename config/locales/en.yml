@@ -4,10 +4,10 @@ en:
   tests:
     index:
       header: "Available tests"
-    test:
-      header: "Title: %{title}"
-      level: "Level: %{level}"
-      questions_count: "Number of questions: %{count}"
+      test_header: "Title"
+      level: "Level"
+      questions_count: "Number of questions"
+      actions: "Actions"
 
   test_passages:
     result:

@@ -13,6 +13,7 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "../utilities/sorting";
+import "../utilities/password_confirmation";
 document.addEventListener("turbolinks:load", function () {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();

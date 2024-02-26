@@ -4,10 +4,10 @@ ru:
   tests:
     index:
       header: "Доступные тесты"
-    test:
-      header: "Название: %{title}"
-      level: "Уровень: %{level}"
-      questions_count: "Количество вопросов: %{count}"
+      test_header: "Название"
+      level: "Уровень"
+      questions_count: "Количество вопросов"
+      actions: "Действия"
 
   test_passages:
     result:
@@ -79,3 +79,4 @@ ru:
 
   gist:
     description: "Вопрос о %{title} от TestGuru"
+  
