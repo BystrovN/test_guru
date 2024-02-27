@@ -1,9 +1,11 @@
-document.addEventListener('turbolinks:load', function () {
+document.addEventListener('DOMContentLoaded', function () {
   const progressBar = document.getElementById('progress-bar');
-  const currentQuestionNumber = parseInt(progressBar.getAttribute('value'));
+  const currentQuestion = parseInt(progressBar.dataset.currentQuestion);
+  const totalQuestions = parseInt(progressBar.dataset.totalQuestions);
 
   const updateProgressBar = () => {
-    progressBar.value = currentQuestionNumber;
+    const progress = (currentQuestion / totalQuestions) * 100;
+    progressBar.style.width = progress + '%';
   };
 
   updateProgressBar();

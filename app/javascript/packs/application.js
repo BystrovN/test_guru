@@ -7,6 +7,7 @@ import "channels";
 import "../utilities/sorting";
 import "../utilities/password_confirmation";
 import "../utilities/form_inline";
+import "../utilities/test_passage_progress";
 
 window.$ = jquery;
 
