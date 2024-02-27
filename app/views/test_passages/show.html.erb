@@ -17,3 +17,5 @@
 <% end %>
 
 <%= button_to t('.gist_link_text'), test_passage_gist_path(@test_passage), method: :post %>
+
+<progress class="progress-bar" value="<%= @test_passage.current_question_number - 1 %>" max="<%= @test_passage.total_questions %>"></progress>
