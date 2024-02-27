@@ -18,6 +18,8 @@ en:
       notice:
         created: "Test successfully created."
         updated: "Test successfully updated."
+      form_inline:
+        submit: "Ok"
     
     answers:
       answer:

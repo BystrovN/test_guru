@@ -18,6 +18,8 @@ ru:
       notice:
         created: "Тест успешно создан."
         updated: "Тест успешно обновлен."
+      form_inline:
+        submit: "ОК"
     
     answers:
       answer:
