@@ -25,6 +25,10 @@ en:
       success: "Gist was successfully created - %{url}"
       failure: "An error occurred while saving gist"
 
+  feedbacks:
+    create:
+      thanks: 'Thanks for your feedback'
+
   helpers:
     submit:
       test:
@@ -79,3 +83,6 @@ en:
   gist:
     description: "A question about %{title} from TestGuru"
 
+  feedback:
+    send: "Send feedback"
+    label: "Feedback"

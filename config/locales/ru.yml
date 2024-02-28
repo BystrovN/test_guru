@@ -24,6 +24,10 @@ ru:
     create:
       success: "Gist успешно сохранен - %{url}"
       failure: "Во время сохранения gist произошла ошибка"
+  
+  feedbacks:
+    create:
+      thanks: 'Спасибо за обратную связь'
 
   helpers:
     submit:
@@ -79,4 +83,8 @@ ru:
 
   gist:
     description: "Вопрос о %{title} от TestGuru"
+
+  feedback:
+    send: "Отправить отзыв"
+    label: "Обратная связь"
   
