@@ -9,7 +9,7 @@ default: &default
 
 development:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>
+  database: test_guru_development
 
 test:
   <<: *default
@@ -17,4 +17,4 @@ test:
 
 production:
   <<: *default
-  database: test_guru_production
+  database: <%= ENV['DB_NAME'] %>
