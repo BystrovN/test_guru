@@ -1,3 +1,10 @@
+Category.destroy_all
+User.destroy_all
+Admin.destroy_all
+Test.destroy_all
+Question.destroy_all
+Answer.destroy_all
+
 categories = Category.create!(
   [
     { title: 'Языки программирования' },
