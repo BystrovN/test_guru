@@ -14,14 +14,6 @@ categories = Category.create!(
   ]
 )
 
-User.create!(
-  [
-    { email: 'user1@test.com', first_name: 'Иван', last_name: 'Иванов', password: '123123' },
-    { email: 'user2@test.com', first_name: 'Петр', last_name: 'Петров', password: '123123' },
-    { email: 'user3@test.com', first_name: 'Мария', last_name: 'Сидорова', password: '123123' }
-  ]
-)
-
 admins = Admin.create!(
   [
     { admin: true, email: ENV.fetch('ADMIN_EMAIL', nil), first_name: 'admin', last_name: 'admin', password: '123123' }
