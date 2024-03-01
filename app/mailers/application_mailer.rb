@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: %(TestGuru <hallnik@yandex.ru>)
+  default from: %("TestGuru" <#{ENV.fetch('SMTP_USER', nil)}>)
   layout 'mailer'
 end
