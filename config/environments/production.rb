@@ -125,7 +125,7 @@ Rails.application.configure do
     address: 'smtp.yandex.ru',
     port: 465,
     domain: 'yandex.ru',
-    user_name: 'hallnik@yandex.ru',
+    user_name: 'hallnik',
     password: ENV.fetch('SMTP_PASSWORD', nil),
     authentication: 'plain',
     enable_starttls_auto: true
