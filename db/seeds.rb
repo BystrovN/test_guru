@@ -14,6 +14,8 @@ categories = Category.create!(
   ]
 )
 
+puts "!!!!YYYYYYYY - #{ENV.fetch('SMTP_USER', nil)}"
+
 admins = Admin.create!(
   [
     { admin: true, email: ENV.fetch('ADMIN_EMAIL', nil), first_name: 'admin', last_name: 'admin', password: '123123' }
