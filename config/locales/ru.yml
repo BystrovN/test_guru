@@ -69,7 +69,6 @@ ru:
   buttons:
     start: "Начать"
 
-
   header:
     logout: "Выход"
     login: "Логин"
@@ -87,4 +86,13 @@ ru:
   feedback:
     send: "Отправить отзыв"
     label: "Обратная связь"
+  
+  activerecord:
+    attributes:
+      user:
+        firstname: "Имя"
+        lastname: "Фамилия"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
   

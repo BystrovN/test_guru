@@ -29,16 +29,20 @@ function sortRowsByTitle() {
   }
 
   const sortedTable = document.createElement('table');
-
   sortedTable.setAttribute('class', tableClass);
   sortedTable.setAttribute('style', tableStyle);
 
-  sortedTable.classList.add('table');
-  sortedTable.appendChild(rows[0]);
+  const thead = document.createElement('thead');
+  const tbody = document.createElement('tbody');
+
+  thead.appendChild(rows[0]);
 
   for (let i = 0; i < sortedRows.length; i++) {
-    sortedTable.appendChild(sortedRows[i]);
+    tbody.appendChild(sortedRows[i]);
   }
+
+  sortedTable.appendChild(thead);
+  sortedTable.appendChild(tbody);
 
   table.parentNode.replaceChild(sortedTable, table);
 }
