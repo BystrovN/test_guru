@@ -1,3 +1,5 @@
+require_relative '../app/models/concerns/rule_types'
+
 Category.destroy_all
 User.destroy_all
 Admin.destroy_all
@@ -73,4 +75,42 @@ Answer.create!(
     { body: 'Git, Jenkins, Puppet, Chef', question: questions[7] },
     { body: 'SQL, NoSQL, MongoDB, Redis', question: questions[7] }
   ]
+)
+
+categories.each do |category|
+  badge = Badge.create(
+    name: "Мастер категории #{category.title}",
+    image_url: 'https://cdn.pixabay.com/photo/2013/07/12/15/55/laurel-wreath-150577_1280.png'
+  )
+
+  BadgeRule.create(
+    type_: RuleTypes::CATEGORY_COMPLETION,
+    description: "Пройти все тесты категории #{category.title}",
+    condition: category.id,
+    badge:
+  )
+end
+
+badge_first_attempt = Badge.create(
+  name: 'С первой попытки',
+  image_url: 'https://cdn.pixabay.com/photo/2014/03/25/16/32/laurel-wreath-297311_1280.png'
+)
+
+BadgeRule.create(
+  type_: RuleTypes::FIRST_ATTEMPT,
+  description: 'Пройти тест с первого раза',
+  condition: nil,
+  badge: badge_first_attempt
+)
+
+badge_level1_completion = Badge.create(
+  name: 'Мастер уровня 1',
+  image_url: 'https://cdn.pixabay.com/photo/2013/07/13/09/51/fame-156160_1280.png'
+)
+
+BadgeRule.create(
+  type_: RuleTypes::LEVEL_COMPLETION,
+  description: 'Пройти все тесты уровня 1',
+  condition: 1,
+  badge: badge_level1_completion
 )

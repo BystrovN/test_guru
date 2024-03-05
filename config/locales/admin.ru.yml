@@ -16,8 +16,8 @@ ru:
       new:
         new: "Новый тест"
       notice:
-        created: "Тест успешно создан."
-        updated: "Тест успешно обновлен."
+        created: "Тест успешно создан"
+        updated: "Тест успешно обновлен"
       form_inline:
         submit: "ОК"
     
@@ -29,8 +29,8 @@ ru:
       new:
         new: "Новый ответ"
       notice:
-        created: "Ответ успешно создан."
-        updated: "Ответ успешно обновлен."
+        created: "Ответ успешно создан"
+        updated: "Ответ успешно обновлен"
 
     questions:
       edit:
@@ -40,11 +40,31 @@ ru:
       show:
         new: "Добавить ответ"
       notice:
-        created: "Вопрос успешно создан."
-        updated: "Вопрос успешно обновлен."
+        created: "Вопрос успешно создан"
+        updated: "Вопрос успешно обновлен"
 
     gists:
       index:
         header: "Созданные gists"
         question: "Вопрос"
         user: "Пользователь"
+
+    badges:
+      notice:
+        created: "Бейдж успешно создан"
+        updated: "Бейдж успешно обновлен"
+        deleted: "Бейдж успешно удален"
+      form:
+        rule: "Критерии получения"
+      index:
+        header: "Бейджи"
+        name: "Название"
+        image: "Изображение"
+        actions: "Действия"
+      edit:
+        edit: "Редактировать бейдж"
+      new:
+        new: "Новый бейдж"
+      show:
+        edit: "Редактировать бейдж"
+        rules: "Критерии получения"

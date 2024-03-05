@@ -48,3 +48,23 @@ en:
         header: "Created gists"
         question: "Question"
         user: "User"
+
+    badges:
+      notice:
+        created: "Badge successfully created"
+        updated: "Badge successfully updated"
+        deleted: "Badge successfully deleted"
+      form:
+        rule: "Criteria for obtaining"
+      index:
+        header: "Badges"
+        name: "Name"
+        image: "Image"
+        actions: "Actions"
+      edit:
+        edit: "Edit badge"
+      new:
+        new: "New badge"
+      show:
+        edit: "Edit badge"
+        rules: "Criteria for obtaining"

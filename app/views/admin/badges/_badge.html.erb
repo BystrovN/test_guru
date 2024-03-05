@@ -1,0 +1,13 @@
+<tr>
+  <td style="text-align: center;"><%= badge.name %></td>
+  <td style="text-align: center;"><%= image_tag badge.image_url, height: 50, width: 50 %></td>
+  <td style="text-align: center;">
+    <%= link_to t('links.show'), admin_badge_path(badge) %>
+  </td>
+  <td style="text-align: center;">
+    <%= link_to t('links.edit'), edit_admin_badge_path(badge) %>
+  </td>
+  <td style="text-align: center;">
+    <%= link_to t('links.delete'), admin_badge_path(badge), method: :delete, data: { confirm: t('actions.sure?') } %>
+  </td>
+</tr>

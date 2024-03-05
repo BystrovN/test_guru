@@ -1,0 +1,22 @@
+<%= form_with(model: badge, url: badge.persisted? ? admin_badge_path(badge) : admin_badges_path, method: badge.persisted? ? :patch : :post) do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :badge_rule_id, t('.rule') %>
+    <%= form.select :badge_rule_id, BadgeRule.all.map { |rule| [rule.description, rule.id] }, { include_blank: true } %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<h1><%= t('.header') %></h1>
+
+<div class="container mt-4">
+  <table class="table">
+    <thead>
+      <tr>
+        <th style="text-align: center;"><%= t('.name') %></th>
+        <th style="text-align: center;"><%= t('.status') %></th>
+        <th colspan="1" style="text-align: center;"><%= t('.actions') %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= render @badges %>
+    </tbody>
+  </table>
+</div>
+
+

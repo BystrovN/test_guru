@@ -28,7 +28,10 @@ Rails.application.routes.draw do
       end
     end
     resources :gists, only: :index
+    resources :badges
   end
 
   post '/feedback', to: 'feedbacks#create'
+
+  resources :badges, only: %i[show index]
 end

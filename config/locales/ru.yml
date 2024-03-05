@@ -41,6 +41,9 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      badge:
+        name: "Название"
+        image_url: "Ссылка на изображение"
     select:
       prompt: "Выберите категорию: "
 
@@ -74,6 +77,7 @@ ru:
     login: "Логин"
     registration: "Регистрация"
     admin: "Панель администратора"
+    badges: "Бейджи"
 
   info:
     school: "Учебный проект в онлайн-школе Thinknetica"
@@ -86,6 +90,19 @@ ru:
   feedback:
     send: "Отправить отзыв"
     label: "Обратная связь"
+
+  badges:
+    badge:
+      received: "Получен"
+      not_received: "Не получен"
+      details: "Подробности"
+    index:
+      header: "Бейджи"
+      name: "Название"
+      status: "Статус"
+      actions: "Действия"
+    show:
+      rules: "Критерии получения"
   
   activerecord:
     attributes:

@@ -28,6 +28,10 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
+  def success?
+    correct_questions == test.questions.count
+  end
+
   private
 
   def find_first_question

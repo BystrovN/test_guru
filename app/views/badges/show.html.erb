@@ -1,0 +1,14 @@
+<h1><%= @badge.name %></h1>
+
+<div>
+  <%= image_tag @badge.image_url, height: 100, width: 100 %>
+</div>
+
+<h2><%= t('.rules') %></h2>
+<ul>
+  <% @badge.badge_rules.each do |rule| %>
+    <li><%= rule.description %></li>
+  <% end %>
+</ul>
+
+<%= link_to t('links.back'), admin_badges_path %>

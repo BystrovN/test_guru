@@ -1,0 +1,11 @@
+<tr>
+  <td style="text-align: center;"><%= badge.name %></td>
+  <% if @user_badges.include?(badge) %>
+    <td style="text-align: center;"><%= t('.received') %></td>
+  <% else %>
+    <td style="text-align: center;"><%= t('.not_received') %></td>
+  <% end %>
+  <td style="text-align: center;">
+    <%= link_to t('.details'), badge_path(badge), class: "btn btn-primary btn-sm" %>
+  </td>
+</tr>
