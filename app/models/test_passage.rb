@@ -6,6 +6,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true, foreign_key: 'question_id'
 
   before_validation :before_validation_find_next_question
+  before_save :set_passed
 
   def completed?
     current_question.nil?
@@ -29,7 +30,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    correct_questions == test.questions.count
+    passed
   end
 
   private
@@ -56,5 +57,9 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
+  end
+
+  def set_passed
+    self.passed = (correct_questions / test.questions.count) >= SUCCESS_PERCENTAGE.to_f / 100
   end
 end

@@ -1,4 +1,4 @@
-require_relative '../app/models/concerns/rule_types'
+require_relative '../app/models/badge_rule'
 
 Category.destroy_all
 User.destroy_all
@@ -84,8 +84,7 @@ categories.each do |category|
   )
 
   BadgeRule.create(
-    type_: RuleTypes::CATEGORY_COMPLETION,
-    description: "Пройти все тесты категории #{category.title}",
+    rule_type: BadgeRule::RuleTypes::CATEGORY_COMPLETION,
     condition: category.id,
     badge:
   )
@@ -97,8 +96,7 @@ badge_first_attempt = Badge.create(
 )
 
 BadgeRule.create(
-  type_: RuleTypes::FIRST_ATTEMPT,
-  description: 'Пройти тест с первого раза',
+  rule_type: BadgeRule::RuleTypes::FIRST_ATTEMPT,
   condition: nil,
   badge: badge_first_attempt
 )
@@ -109,8 +107,7 @@ badge_level1_completion = Badge.create(
 )
 
 BadgeRule.create(
-  type_: RuleTypes::LEVEL_COMPLETION,
-  description: 'Пройти все тесты уровня 1',
+  rule_type: BadgeRule::RuleTypes::LEVEL_COMPLETION,
   condition: 1,
   badge: badge_level1_completion
 )

@@ -26,7 +26,7 @@ class Admin::BadgesController < Admin::BaseController
   def edit; end
 
   def update
-    @badge.badge_rules << @rule
+    @badge.badge_rules << @rule unless @badge.badge_rules.include?(@rule)
 
     if @badge.update(badge_params)
       redirect_to admin_badges_path, notice: t('.notice.updated')
@@ -51,6 +51,9 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   def find_rule
-    @rule = BadgeRule.find(params[:badge][:badge_rule_id])
+    @rule = BadgeRule.find_or_create_by(
+      rule_type: params[:badge][:rule_type],
+      condition: params[:badge][:badge_rule_condition]
+    )
   end
 end

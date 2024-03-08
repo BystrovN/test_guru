@@ -12,11 +12,17 @@
   </div>
 
   <div class="field">
-    <%= form.label :badge_rule_id, t('.rule') %>
-    <%= form.select :badge_rule_id, BadgeRule.all.map { |rule| [rule.description, rule.id] }, { include_blank: true } %>
+    <%= form.label :rule_type, t('.rule_type') %>
+    <%= form.select :rule_type, BadgeRule::RuleTypes.constants.map { |c| BadgeRule::RuleTypes.const_get(c) } %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :badge_rule_condition, t('.rule_condition') %>
+    <%= form.text_field :badge_rule_condition %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

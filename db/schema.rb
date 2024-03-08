@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_03_04_183137) do
+ActiveRecord::Schema.define(version: 2024_03_07_221501) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2024_03_04_183137) do
   end
 
   create_table "badge_rules", force: :cascade do |t|
-    t.integer "type_", null: false
+    t.integer "rule_type", null: false
     t.string "description", null: false
     t.text "condition"
     t.integer "badge_id", null: false
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2024_03_04_183137) do
     t.integer "correct_questions", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "passed", default: false, null: false
     t.index ["question_id"], name: "index_test_passages_on_question_id"
     t.index ["test_id"], name: "index_test_passages_on_test_id"
     t.index ["user_id"], name: "index_test_passages_on_user_id"
