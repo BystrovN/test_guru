@@ -104,12 +104,3 @@ ru:
     show:
       rules: "Критерии получения"
   
-  activerecord:
-    attributes:
-      user:
-        firstname: "Имя"
-        lastname: "Фамилия"
-        email: "Электронная почта"
-        password: "Пароль"
-        password_confirmation: "Подтверждение пароля"
-  

@@ -74,6 +74,7 @@ en:
     login: "Login"
     registration: "Registration"
     admin: "Admin panel"
+    badges: "Badges"
 
   info:
     school: "Educational project at Thinknetica online school"
@@ -87,11 +88,15 @@ en:
     send: "Send feedback"
     label: "Feedback"
 
-  activerecord:
-    attributes:
-      user:
-        firstname: "Firstname"
-        lastname: "Lastname"
-        email: "Email"
-        password: "Password"
-        password_confirmation: "Password confirmation"
+  badges:
+    badge:
+      received: "Received"
+      not_received: "Not received"
+      details: "Details"
+    index:
+      header: "Badges"
+      name: "Name"
+      status: "Status"
+      actions: "Actions"
+    show:
+      rules: "Receiving rules"

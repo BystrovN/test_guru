@@ -21,19 +21,12 @@ ActiveRecord::Schema.define(version: 2024_03_07_221501) do
     t.index ["question_id"], name: "index_answers_on_question_id"
   end
 
-  create_table "badge_rules", force: :cascade do |t|
-    t.integer "rule_type", null: false
-    t.string "description", null: false
-    t.text "condition"
-    t.integer "badge_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["badge_id"], name: "index_badge_rules_on_badge_id"
-  end
-
   create_table "badges", force: :cascade do |t|
     t.string "name", limit: 50, null: false
     t.string "image_url"
+    t.string "description", null: false
+    t.integer "rule_type", null: false
+    t.text "condition"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_badges_on_name", unique: true
@@ -120,7 +113,6 @@ ActiveRecord::Schema.define(version: 2024_03_07_221501) do
   end
 
   add_foreign_key "answers", "questions"
-  add_foreign_key "badge_rules", "badges"
   add_foreign_key "gists", "questions"
   add_foreign_key "gists", "users"
   add_foreign_key "questions", "tests"

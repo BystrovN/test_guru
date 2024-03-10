@@ -12,13 +12,18 @@
   </div>
 
   <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
     <%= form.label :rule_type, t('.rule_type') %>
-    <%= form.select :rule_type, BadgeRule::RuleTypes.constants.map { |c| BadgeRule::RuleTypes.const_get(c) } %>
+    <%= form.select :rule_type, RuleTypesHelper.constants.map { |c| RuleTypesHelper.const_get(c) } %>
   </div>
   
   <div class="field">
-    <%= form.label :badge_rule_condition, t('.rule_condition') %>
-    <%= form.text_field :badge_rule_condition %>
+    <%= form.label :condition, t('.rule_condition') %>
+    <%= form.text_field :condition %>
   </div>
 
   <div class="actions">

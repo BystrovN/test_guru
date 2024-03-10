@@ -1,4 +1,4 @@
-require_relative '../app/models/badge_rule'
+require_relative '../app/helpers/rule_types_helper'
 
 Category.destroy_all
 User.destroy_all
@@ -78,36 +78,27 @@ Answer.create!(
 )
 
 categories.each do |category|
-  badge = Badge.create(
+  Badge.create(
     name: "Мастер категории #{category.title}",
-    image_url: 'https://cdn.pixabay.com/photo/2013/07/12/15/55/laurel-wreath-150577_1280.png'
-  )
-
-  BadgeRule.create(
-    rule_type: BadgeRule::RuleTypes::CATEGORY_COMPLETION,
-    condition: category.id,
-    badge:
+    image_url: 'https://cdn.pixabay.com/photo/2013/07/12/15/55/laurel-wreath-150577_1280.png',
+    description: "Пройти все тесты категории #{category.title}",
+    rule_type: RuleTypesHelper::CATEGORY_COMPLETION,
+    condition: category.id
   )
 end
 
-badge_first_attempt = Badge.create(
+Badge.create(
   name: 'С первой попытки',
-  image_url: 'https://cdn.pixabay.com/photo/2014/03/25/16/32/laurel-wreath-297311_1280.png'
+  image_url: 'https://cdn.pixabay.com/photo/2014/03/25/16/32/laurel-wreath-297311_1280.png',
+  description: 'Пройти тест с первой попытки',
+  rule_type: RuleTypesHelper::FIRST_ATTEMPT,
+  condition: nil
 )
 
-BadgeRule.create(
-  rule_type: BadgeRule::RuleTypes::FIRST_ATTEMPT,
-  condition: nil,
-  badge: badge_first_attempt
-)
-
-badge_level1_completion = Badge.create(
+Badge.create(
   name: 'Мастер уровня 1',
-  image_url: 'https://cdn.pixabay.com/photo/2013/07/13/09/51/fame-156160_1280.png'
-)
-
-BadgeRule.create(
-  rule_type: BadgeRule::RuleTypes::LEVEL_COMPLETION,
-  condition: 1,
-  badge: badge_level1_completion
+  image_url: 'https://cdn.pixabay.com/photo/2013/07/13/09/51/fame-156160_1280.png',
+  description: 'Пройти все тесты уровня 1',
+  rule_type: RuleTypesHelper::LEVEL_COMPLETION,
+  condition: 1
 )

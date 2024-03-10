@@ -6,6 +6,12 @@ ru:
     attributes:
       test:
         title: "Название"
+      user:
+        firstname: "Имя"
+        lastname: "Фамилия"
+        email: "Электронная почта"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
   
     errors:
       messages:
