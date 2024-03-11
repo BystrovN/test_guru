@@ -13,6 +13,8 @@ en:
         category: "Category: %{title}"
         author: "Author: %{email}"
         questions_list: "List of questions:"
+        timer: "Time to complete, sec %{timer}"
+        timer_miss: "unlimited"
       new:
         new: "New test"
       notice:

@@ -7,11 +7,14 @@ ru:
       test_header: "Название"
       level: "Уровень"
       questions_count: "Количество вопросов"
+      timer: "Время на прохождение, сек"
       actions: "Действия"
+    test:
+      timer_miss: "не ограничено"
 
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен"
       pass: "Тест сдан"
       failed: "Тест провален"
       all_tests: "Список всех тестов"
@@ -19,6 +22,8 @@ ru:
       walk: "Прохождение %{title}"
       current_question: "Вопрос %{current_question} из %{total_questions}:"
       gist_link_text: "Gist вопрос"
+    notice:
+      time_is_over: "Время вышло"
   
   gists:
     create:
@@ -41,6 +46,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        timer: "Время на прохождение теста, сек"
       badge:
         name: "Название"
         image_url: "Ссылка на изображение"

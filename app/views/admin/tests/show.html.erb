@@ -2,6 +2,7 @@
 <p><%= t('.level', level: @test.level) %></p>
 <p><%= t('.category', title: @test.category.title) %></p>
 <p><%= t('.author', email: @test.author.email) %></p>
+<p><%= t('.timer', timer: @test.timer.nil? ? t('.timer_miss') : @test.timer) %></p>
 <p><%= link_to t('links.edit'), edit_admin_test_path(@test) %></p>
 
 <h2><%= t('.questions_list') %></h2>

@@ -19,3 +19,9 @@
 <%= button_to t('.gist_link_text'), test_passage_gist_path(@test_passage), method: :post %>
 
 <div id="progress-bar" data-current-question="<%= @test_passage.current_question_number - 1 %>" data-total-questions="<%= @test_passage.total_questions %>"></div>
+
+<% if !@test_passage.test.timer.nil? %>
+  <div class="timer-container">
+    <div id="timer" class="timer" data-initial-time="<%= @test_passage.time_left %>"></div>
+  </div>
+<% end %>

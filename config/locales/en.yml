@@ -7,11 +7,14 @@ en:
       test_header: "Title"
       level: "Level"
       questions_count: "Number of questions"
+      timer: "Time to complete, sec"
       actions: "Actions"
+    test:
+      timer_miss: "unlimited"
 
   test_passages:
     result:
-      header: "Test %{title} successfully completed!"
+      header: "Test %{title} completed"
       pass: "Test passed"
       failed: "Test failed"
       all_tests: "List of all tests"
@@ -19,6 +22,8 @@ en:
       walk: "Passage of %{title}"
       current_question: "Question %{current_question} out of %{total_questions}:"
       gist_link_text: "Gist question"
+    notice:
+      time_is_over: "Time is over"
 
   gists:
     create:
@@ -41,6 +46,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        timer: "Time to complete the test, sec"
     select:
       prompt: "Select category: "
 

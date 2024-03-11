@@ -13,6 +13,8 @@ ru:
         category: "Категория: %{title}"
         author: "Автор: %{email}"
         questions_list: "Список вопросов:"
+        timer: "Время на прохождение, сек %{timer}"
+        timer_miss: "не ограничено"
       new:
         new: "Новый тест"
       notice:

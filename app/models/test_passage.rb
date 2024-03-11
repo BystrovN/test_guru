@@ -33,6 +33,16 @@ class TestPassage < ApplicationRecord
     passed
   end
 
+  def time_left
+    test.timer - (Time.current - created_at)
+  end
+
+  def time_over?
+    return false if test.timer.nil?
+
+    time_left <= 0
+  end
+
   private
 
   def find_first_question
