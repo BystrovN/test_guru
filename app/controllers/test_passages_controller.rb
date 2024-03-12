@@ -8,10 +8,7 @@ class TestPassagesController < ApplicationController
   def update
     @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.time_over?
-      flash[:notice] = t('.notice.time_is_over')
-      redirect_to result_test_passage_path(@test_passage) and return
-    end
+    flash[:notice] = t('.notice.time_is_over') if @test_passage.time_over?
 
     if @test_passage.completed?
       BadgeService.new(@test_passage).check_and_issue_badges if @test_passage.success?

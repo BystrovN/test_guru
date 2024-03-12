@@ -9,7 +9,7 @@ class TestPassage < ApplicationRecord
   before_save :set_passed
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_over?
   end
 
   def accept!(answer_ids)
